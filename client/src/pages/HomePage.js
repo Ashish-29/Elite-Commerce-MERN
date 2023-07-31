@@ -75,7 +75,8 @@ const HomePage = () => {
     }
     return true;
   };
-        
+  
+  // apply filter button click
   const handleApplyFilter = () => {
     if(areArraysEqual(checked, ichecked) && radio.length===iradio.length) {
       if(radio.length===0) return;
@@ -86,6 +87,7 @@ const HomePage = () => {
     setPage(1);
   };
     
+  // reset filter button click
   const handleReset = () => {
     setiRadio([]); 
     setiChecked([]); 
@@ -95,7 +97,8 @@ const HomePage = () => {
       setPage(1);
     }
   };
-
+  
+  //change in imageCloud branch
   useEffect(() => {
     if(page===1) getTotal();
     loadMore();
